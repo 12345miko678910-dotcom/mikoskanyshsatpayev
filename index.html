@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f5f0e7">
+    <meta name="description" content="Қаныш Сәтбаевтың өмір жолы мен қазақ ғылымының қалыптасуы туралы отбасылық хрестоматия.">
+    <meta property="og:type" content="book">
+    <meta property="og:title" content="Қаныш және ғылыми майдан">
+    <meta property="og:description" content="Қаныш Сәтбаевтың өмір жолы мен қазақ ғылымының қалыптасуы туралы отбасылық хрестоматия.">
+    <meta property="og:image" content="cover.svg">
+    <title>Қаныш және ғылыми майдан — онлайн кітап</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main id="home" class="home-screen">
+      <header class="site-header">
+        <a class="wordmark" href="./" aria-label="Басты бет">КІТАПХАНА</a>
+        <button id="share-home" class="text-button" type="button">Бөлісу <span aria-hidden="true">↗</span></button>
+      </header>
+
+      <section class="book-intro" aria-labelledby="book-title">
+        <div class="cover-wrap">
+          <img class="book-cover" src="cover.svg" alt="Қаныш және ғылыми майдан кітабының мұқабасы">
+          <span class="cover-shadow" aria-hidden="true"></span>
+        </div>
+        <div class="book-copy">
+          <p class="eyebrow">ОНЛАЙН КІТАП</p>
+          <h1 id="book-title">Қаныш және<br>ғылыми майдан</h1>
+          <p id="book-author" class="book-author">С. Керімбай, Ә. Нәби</p>
+          <p id="book-description" class="book-description">Қаныш Сәтбаевтың өмір жолы мен қазақ ғылымының қалыптасуы туралы отбасылық хрестоматия. Кітапта Қазақ Ғылым Академиясының тарихы, Қаныштың ғылыми ортасы және замандастары баяндалады.</p>
+          <div class="book-meta"><span id="page-count-label">454 бет</span><span class="meta-dot">·</span><span>Тегін оқу</span></div>
+          <div class="home-actions">
+            <button id="start-reading" class="primary-button" type="button">Оқуды бастау <span aria-hidden="true">→</span></button>
+            <button id="continue-reading" class="secondary-button" type="button" hidden>Жалғастыру <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="home-footer"><span>Оқуға арналған тыныш кеңістік</span><span>Прогресс осы құрылғыда сақталады</span></footer>
+    </main>
+
+    <section id="reader" class="reader" aria-label="Кітап оқу" hidden>
+      <header id="reader-toolbar" class="reader-toolbar">
+        <button id="back-home" class="icon-button" type="button" aria-label="Басты бетке қайту" title="Басты бет">←</button>
+        <div class="reader-title" id="reader-title">Қаныш және ғылыми майдан</div>
+        <div class="toolbar-actions">
+          <button id="toc-toggle" class="icon-button labeled" type="button" aria-label="Мазмұн" title="Мазмұн">☷ <span>Мазмұн</span></button>
+          <button id="text-toggle" class="icon-button" type="button" aria-label="Сканды көрсету" title="Сканды көрсету">Скан</button>
+          <button id="bookmark-toggle" class="icon-button" type="button" aria-label="Бетбелгі қою" title="Бетбелгі қою">☆</button>
+          <button id="theme-toggle" class="icon-button" type="button" aria-label="Тақырыпты өзгерту" title="Тақырыпты өзгерту">◐</button>
+          <button id="fullscreen-toggle" class="icon-button" type="button" aria-label="Толық экран" title="Толық экран">⛶</button>
+          <button id="toolbar-share" class="icon-button" type="button" aria-label="Бөлісу" title="Бөлісу">↗</button>
+        </div>
+      </header>
+
+      <aside id="toc-panel" class="toc-panel" aria-label="Мазмұн және бетбелгілер" hidden>
+        <div class="panel-heading"><h2>Оқу навигациясы</h2><button id="toc-close" class="icon-button" type="button" aria-label="Жабу">×</button></div>
+        <div class="panel-tabs"><button class="panel-tab active" data-panel="chapters" type="button">Мазмұны</button><button class="panel-tab" data-panel="bookmarks" type="button">Бетбелгілер</button></div>
+        <div id="chapters-list" class="panel-list"></div>
+        <div id="bookmarks-list" class="panel-list" hidden></div>
+      </aside>
+      <button id="panel-backdrop" class="panel-backdrop" type="button" aria-label="Панельді жабу" hidden></button>
+      <div id="reader-stage" class="reader-stage">
+        <button id="previous-page" class="page-arrow previous" type="button" aria-label="Алдыңғы бет">‹</button>
+        <div id="page-spread" class="page-spread">
+          <div class="page-frame">
+            <div class="page-skeleton"></div>
+            <img id="page-image" alt="Кітап беті 1" draggable="false">
+            <article id="book-text-page" class="book-text-page" aria-label="Кітап мәтіні" aria-live="polite">
+              <div id="book-text-content" class="book-text-content">Мәтін жүктелуде…</div>
+              <footer id="book-text-page-number" class="book-text-page-number">1</footer>
+            </article>
+          </div>
+          <div id="second-frame" class="page-frame second-frame" hidden><div class="page-skeleton"></div><img id="second-image" alt="" draggable="false"></div>
+        </div>
+        <button id="next-page" class="page-arrow next" type="button" aria-label="Келесі бет">›</button>
+        <div id="load-error" class="load-error" role="status" hidden>Бұл бетке скан әлі қосылмаған. «Аа» батырмасымен мәтінді оқыңыз.</div>
+      </div>
+
+      <footer id="reader-controls" class="reader-controls">
+        <div class="page-position"><span id="current-page-label">1 / 454</span><button id="spread-toggle" class="spread-toggle" type="button" aria-pressed="false">Разворот</button></div>
+        <div class="progress-row">
+          <button id="previous-text" class="text-button" type="button">Алдыңғы</button>
+          <input id="page-slider" type="range" min="1" max="454" value="1" aria-label="Беттер бойынша жылжыту">
+          <button id="next-text" class="text-button" type="button">Келесі</button>
+        </div>
+        <form id="page-form" class="page-form">
+          <label for="page-input">Бетке өту</label>
+          <input id="page-input" type="number" min="1" max="454" inputmode="numeric" placeholder="№">
+          <button type="submit">Өту</button>
+        </form>
+      </footer>
+      <div id="reader-hint" class="reader-hint" aria-hidden="true">← → пернелерімен немесе сырғытып парақтаңыз</div>
+    </section>
+    <div id="live-message" class="visually-hidden" aria-live="polite"></div>
+    <script src="config.js"></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "Қаныш және ғылыми майдан",
+  "short_name": "Ғылыми майдан",
+  "description": "Кітапты браузерде тегін оқыңыз.",
+  "lang": "kk",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f0e7",
+  "theme_color": "#f5f0e7",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

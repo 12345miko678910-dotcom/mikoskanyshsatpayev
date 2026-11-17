@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1080" viewBox="0 0 720 1080">
+  <defs>
+    <linearGradient id="paper" x2="0" y2="1">
+      <stop stop-color="#eee5d6"/>
+      <stop offset="1" stop-color="#d8c8ae"/>
+    </linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#9c7959" stroke-opacity=".16"/>
+    </pattern>
+  </defs>
+  <rect width="720" height="1080" fill="#604b3b"/>
+  <rect x="22" y="22" width="676" height="1036" fill="url(#paper)"/>
+  <rect x="42" y="42" width="636" height="996" fill="url(#grid)" stroke="#967758" stroke-width="2"/>
+  <path d="M360 170c-86 0-156 70-156 156v89h312v-89c0-86-70-156-156-156Z" fill="none" stroke="#77593f" stroke-width="3" opacity=".8"/>
+  <circle cx="360" cy="326" r="63" fill="none" stroke="#77593f" stroke-width="3"/>
+  <path d="M272 415c19-48 54-72 88-72s69 24 88 72M244 456h232M270 486h180" fill="none" stroke="#77593f" stroke-width="3" opacity=".8"/>
+  <text x="360" y="600" text-anchor="middle" fill="#382f26" font-family="Georgia,serif" font-size="54" letter-spacing="2">ҚАНЫШ ЖӘНЕ</text>
+  <text x="360" y="675" text-anchor="middle" fill="#382f26" font-family="Georgia,serif" font-size="57" letter-spacing="1">ҒЫЛЫМИ МАЙДАН</text>
+  <path d="M250 725h220" stroke="#8b6045" stroke-width="3"/>
+  <text x="360" y="782" text-anchor="middle" fill="#705b47" font-family="Georgia,serif" font-size="24" letter-spacing="5">КІТАП</text>
+  <text x="360" y="970" text-anchor="middle" fill="#77593f" font-family="Georgia,serif" font-size="17" letter-spacing="4">ОНЛАЙН ОҚУҒА АРНАЛҒАН НҰСҚА</text>
+</svg>
